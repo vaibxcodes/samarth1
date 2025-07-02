@@ -1,4 +1,3 @@
-
 import { Package, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Package className="h-8 w-8 text-blue-400" />
-              <span className="text-2xl font-bold">PackagePro</span>
+              <span className="text-2xl font-bold">Samarth Packwell</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Your trusted partner for innovative and sustainable packaging solutions across all industries.
@@ -54,7 +53,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 PackagePro. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <p>&copy; 2024 Samarth Packwell. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
       </div>
     </footer>

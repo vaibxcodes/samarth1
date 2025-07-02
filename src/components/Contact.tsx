@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -32,7 +31,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div className="text-gray-300">info@packagepro.com</div>
+                    <div className="text-gray-300">info@samarthpackwell.com</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
