@@ -36,23 +36,32 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+    <section id="services" className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 md:mb-6 transform transition-all duration-500 hover:scale-105">Our Services</h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive packaging solutions tailored to meet your specific industry needs
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow group">
-              <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
-                <service.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors" />
+            <div 
+              key={index} 
+              className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group transform hover:-translate-y-2 animate-fade-in border border-gray-100"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="bg-gradient-to-br from-blue-100 to-blue-200 w-14 h-14 md:w-16 md:h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-6">
+                <service.icon className="h-7 w-7 md:h-8 md:w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">{service.title}</h3>
+              <p className="text-gray-600 leading-relaxed text-sm md:text-base">{service.description}</p>
             </div>
           ))}
         </div>
