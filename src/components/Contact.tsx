@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -40,7 +41,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Address</div>
-                    <div className="text-gray-300">123 Packaging Ave, Industrial District, NY 10001</div>
+                    <div className="text-gray-300">B-7, Gat No.904, Near Vaishali Garden, Kolhapur Road, Kolhapur Road-416115</div>
                   </div>
                 </div>
               </div>
